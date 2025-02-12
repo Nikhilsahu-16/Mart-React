@@ -7,22 +7,7 @@ function Order()
     let order = useSelector((state) => state.order);
     let [orderItems, setOrderItems] = useState(order);
 
-    // Flatten the order and item structure
-    const flattenedOrderItems = order.flatMap((purchase) =>
-        purchase.item.map((item) => ({
-            ...item, // Spread item data
-            date: purchase.date, // Add the purchase date to each item
-        }))
-    );
-
-    // Update state when flattenedOrderItems changes
-    useEffect(() =>
-    {
-        setOrderItems(flattenedOrderItems);
-    }, [flattenedOrderItems]);
-
-
-    console.log("Flattened Order Items:", orderItems); // Log the order items to check data
+   
 
     return (
         <>
