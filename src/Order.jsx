@@ -21,16 +21,6 @@ function Order()
         setOrderItems(flattenedOrderItems);
     }, [flattenedOrderItems]);
 
-    // Filtering functions
-    const Above = () =>
-    {
-        setOrderItems(flattenedOrderItems.filter((item) => item.price > 200));
-    };
-
-    const Below = () =>
-    {
-        setOrderItems(flattenedOrderItems.filter((item) => item.price < 200));
-    };
 
     console.log("Flattened Order Items:", orderItems); // Log the order items to check data
 
@@ -41,34 +31,7 @@ function Order()
                 {order.length === 0 ? (
                     <p>No Purchase history available.</p>
                 ) : (
-                    <div>
-                        {/* Filter checkboxes */}
-                        <div className="d-flex justify-content-start mb-4">
-                            <div className="form-check me-3">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    id="cbx-42"
-                                    onClick={Above}
-                                />
-                                <label className="form-check-label" htmlFor="cbx-42">
-                                    Above &#8377;200
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    id="cbx-41"
-                                    onClick={Below}
-                                />
-                                <label className="form-check-label" htmlFor="cbx-41">
-                                    Below &#8377;200
-                                </label>
-                            </div>
-                        </div>
 
-                        {/* Cards container using Bootstrap grid */}
                         <div className="row g-3">
                             {orderItems.map((item, index) => (
                                 <div
@@ -95,7 +58,6 @@ function Order()
                                 </div>
                             ))}
                         </div>
-                    </div>
                 )}
             </section>
             <footer className="bg-dark text-white py-4 text-center">
