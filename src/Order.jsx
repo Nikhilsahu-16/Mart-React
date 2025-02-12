@@ -7,7 +7,19 @@ function Order()
     let order = useSelector((state) => state.order);
     let [orderItems, setOrderItems] = useState(order);
 
-   
+    // Flatten the order and item structure
+    const flattenedOrderItems = order.flatMap((purchase) =>
+        purchase.item.map((item) => ({
+            ...item, // Spread item data
+            date: purchase.date, // Add the purchase date to each item
+        }))
+    );
+
+    // Update state when flattenedOrderItems changes
+    useEffect(() =>
+    {
+        setOrderItems(flattenedOrderItems);
+    }, [flattenedOrderItems]);
 
     return (
         <>
@@ -25,9 +37,6 @@ function Order()
                                 >
                                     <div className="card h-100">
                                         <div className="card-body">
-                                            {/* Debugging: Check the item data */}
-                                            {console.log(item)}
-                                            {/* Ensure the item has `source`, `name`, `price`, and `quantity` */}
                                             <img
                                                 src={item.source}
                                                 alt={item.name}
