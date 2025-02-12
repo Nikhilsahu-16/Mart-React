@@ -15,11 +15,16 @@ function Order()
         }))
     );
 
-    // Update state when flattenedOrderItems changes
-    useEffect(() =>
-    {
-        setOrderItems(flattenedOrderItems);
+    useEffect(() => {
+        setOrderItems(prevOrderItems => {
+            if (JSON.stringify(prevOrderItems) !== JSON.stringify(flattenedOrderItems)) {
+                return flattenedOrderItems;
+            }
+            return prevOrderItems;
+        });
     }, [flattenedOrderItems]);
+    
+    
 
     return (
         <>
