@@ -1,0 +1,147 @@
+/* Custom styles for the Non-Veg section */
+.card1 {
+    border: none;
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Light shadow for a subtle effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+    /* Make the card smaller in width */
+    margin: 0 auto;
+    /* Center the card horizontally */
+    height: 200px;
+    /* Significantly reduced card height */
+}
+
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+    /* Rounded corners for the image */
+    object-fit: cover;
+    /* Ensures image covers the area */
+    height: 100px;
+    /* Significantly reduced image height */
+    width: 100%;
+    /* Image takes up the entire width of the card */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align items to the top */
+    align-items: center;
+    /* Horizontally center the content */
+    padding: 6px;
+    /* Reduced padding to make content more compact */
+    height: 100%;
+    /* Ensure it takes up all available space */
+}
+
+.card-body .card-title,
+.card-body .card-text {
+    margin: 0;
+    text-align: center;
+}
+
+.card-body .card-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-body .card-text {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.card1 button {
+    padding: 4px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 0.75rem;
+}
+
+.card1 button:hover {
+    background-color: #0056b3;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design Adjustments */
+
+/* On small devices, the card text and button adjust accordingly */
+@media (max-width: 768px) {
+    .card1 {
+        max-width: 150px;
+        /* Further reduce card width */
+        height: 180px;
+        /* Further reduce card height on smaller screens */
+    }
+
+    .card-body .card-title {
+        font-size: 0.75rem;
+    }
+
+    .card-body .card-text {
+        font-size: 0.65rem;
+    }
+
+    .card1 button {
+        padding: 3px;
+        font-size: 0.7rem;
+    }
+}
+
+/* On extra small devices, we make the card body text even smaller for better readability */
+@media (max-width: 576px) {
+    .card1 {
+        max-width: 130px;
+        /* Further reduce card width on smaller devices */
+        height: 160px;
+        /* Further reduce card height */
+    }
+
+    .card-body .card-title {
+        font-size: 0.7rem;
+    }
+
+    .card-body .card-text {
+        font-size: 0.6rem;
+    }
+
+    .card1 button {
+        padding: 2px;
+        font-size: 0.6rem;
+    }
+}
+
+footer {
+    position: fixed;
+    /* Fixed positioning to the bottom */
+    bottom: 0;
+    /* Align it to the bottom of the page */
+    left: 0;
+    /* Align it to the left of the page */
+    width: 100%;
+    /* Make it span the full width of the screen */
+    background-color: #333;
+    /* Dark background color */
+    color: white;
+    /* White text */
+    text-align: center;
+    /* Center text */
+    padding: 10px 0;
+    /* Padding for the footer */
+    z-index: 999;
+    /* Ensure the footer stays above other elements */
+}

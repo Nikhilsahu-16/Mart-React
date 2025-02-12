@@ -1,0 +1,22 @@
+/* Adjust spacing for social icons and map */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Social media icon hover effect */
+.social-icons a {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    /* Example: Change color on hover */
+}
+
+/* Map styling */
+.map-container iframe {
+    border-radius: 12px;
+}

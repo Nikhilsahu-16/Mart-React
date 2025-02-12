@@ -1,27 +1,63 @@
+import React from "react";
+import "./AboutUs.css"; // Import custom CSS for styling
+
 function AboutUs()
 {
     return (
         <>
-
-            <section id="about-us">
-            <h1 className="paint-order">
-            <span>About&nbsp;&nbsp;&nbsp; Us</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore dolores laboriosam facilis exercitationem ad, fugiat amet natus architecto iste consectetur necessitatibus reiciendis voluptates dolorem ipsam est quidem aperiam earum?
-                    Voluptas sunt, rem consectetur vitae repellat perspiciatis cupiditate labore cumque ducimus! Facere dignissimos labore soluta magnam est? Similique, vel. Culpa totam accusantium debitis nesciunt laborum saepe odit esse magnam id.
-                    Sint eum velit odit, nisi odio enim! Ea alias omnis modi animi dolorem optio quas adipisci voluptate at? Aspernatur magnam facere cupiditate assumenda consequuntur quae ullam! Non iusto iure consectetur!
-                    Perspiciatis minima velit atque non explicabo maxime voluptate illum illo aspernatur, provident nemo expedita sed? Cumque quod earum expedita commodi libero aut voluptatum sapiente impedit at officia, eaque, ut sed?
-                    Consequatur sit vitae iure ut porro reiciendis accusamus maiores doloremque at, vel possimus magnam, vero aut eos ullam ipsum quibusdam? Labore impedit assumenda quod inventore voluptate? Sequi incidunt assumenda in.
-                    Laudantium deserunt neque in non dolorem voluptatum iusto suscipit, praesentium tempore, eius cum qui delectus illum minus magnam. Nulla qui dignissimos temporibus laborum rem nobis repellat placeat! Consectetur, nemo eum.
-                    Explicabo nam fuga aliquid, beatae libero voluptate? Recusandae consequatur laudantium quisquam mollitia vitae delectus officiis ipsam velit harum libero laborum tenetur amet, voluptatem facilis nihil. Quas ad soluta modi omnis?
-                    Provident odio optio earum culpa, commodi voluptatum a ex aut praesentium sunt similique asperiores ut quis perspiciatis veritatis, deleniti porro natus debitis voluptates id sed ab placeat, blanditiis explicabo. Porro!
-                    Molestiae ex aliquid assumenda minus earum nobis, perferendis sunt temporibus esse illum? Distinctio reiciendis ea accusantium, eaque voluptas optio, quod, dicta quas harum sint iusto deleniti maxime a laudantium expedita?
-                    Blanditiis, quam veritatis eum saepe possimus accusantium, odit veniam ducimus mollitia quasi, tenetur facere quidem! Neque quidem, maiores voluptates sed placeat ipsam impedit eveniet porro ad eos modi velit recusandae.</p>
+            {/* Hero Section */}
+            <section id="hero" className="hero-section text-center py-5 text-white">
+                <div className="container">
+                    <h1 className="display-4 mb-4">Welcome to Our Food Delivery Service</h1>
+                    <p className="lead mb-4">
+                        Delivering delicious food directly to your doorstep.
+                    </p>
+                    <a href="#about-us" className="btn btn-primary">Learn More</a>
+                </div>
             </section>
 
-            <footer>
+            {/* About Us Section */}
+            <section id="about-us" className="about-us-section py-5">
+                <div className="container">
+                    <h1 className="text-center display-4 mb-4">About Us</h1>
+                    <p className="lead text-justify mb-5">
+                        We are committed to offering the best food delivery service. Our mission is to provide fast, reliable, and quality food to our customers. We believe in convenience, flavor, and satisfaction. Join us in enjoying great meals, delivered right to your door.
+                    </p>
+
+                    {/* Mission Section */}
+                    <div className="mission-section mb-5">
+                        <h2>Our Mission</h2>
+                        <p>
+                            Our mission is to deliver high-quality, fresh meals right to your doorstep quickly and efficiently. We strive to make every meal enjoyable and convenient for our customers.
+                        </p>
+                    </div>
+
+                    {/* Values Section */}
+                    <div className="values-section mb-5">
+                        <h2>Our Values</h2>
+                        <ul>
+                            <li><strong>Quality:</strong> We use only the freshest ingredients.</li>
+                            <li><strong>Customer-Centric:</strong> Our focus is on customer satisfaction.</li>
+                            <li><strong>Integrity:</strong> We deliver what we promise, every time.</li>
+                        </ul>
+                    </div>
+
+                    {/* Vision Section */}
+                    <div className="vision-section mb-5">
+                        <h2>Our Vision</h2>
+                        <p>
+                            To become the leading food delivery service, known for its reliability and top-notch customer service.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Footer Section */}
+            <footer className="bg-dark text-white py-4 text-center">
                 <p>&copy; 2025 Food Delivery Service. All rights reserved.</p>
             </footer>
         </>
-    )
+    );
 }
+
 export default AboutUs;

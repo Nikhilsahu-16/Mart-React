@@ -1,0 +1,12 @@
+/* Add margin-bottom to Featured Products section */
+#featured-products {
+    margin-bottom: 30px;
+    /* Adjust the value as needed */
+}
+
+/* Optional: Add padding to footer for better spacing */
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}

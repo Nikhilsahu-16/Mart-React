@@ -1,0 +1,81 @@
+/* Hero Section */
+.hero-section {
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    padding: 80px 0;
+}
+
+.hero-section .btn-primary {
+    background-color: #fff;
+    color: #000;
+    /* Yellow button */
+    border: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #fff;
+}
+
+/* About Us Section */
+.about-us-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-us-section h1,
+.about-us-section h2 {
+    color: #007bff;
+}
+
+.about-us-section p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Mission, Values, and Vision Sections */
+.mission-section,
+.values-section,
+.vision-section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.mission-section h2,
+.values-section h2,
+.vision-section h2 {
+    color: #007bff;
+}
+
+.mission-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mission-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .about-us-section {
+        padding: 40px 0;
+    }
+}
